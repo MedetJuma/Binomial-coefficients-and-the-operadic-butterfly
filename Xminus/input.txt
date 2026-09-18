@@ -6,7 +6,7 @@
 #  count      -- count the number of normal forms
 #                  with respect to the given theory
 
-actions: normalise
+actions: normalise count
 
 # --------------------------------------
 # Parameters for counting
