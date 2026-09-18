@@ -21,9 +21,11 @@ for i in range(len(leading_terms)):
         continue
     if "x(lambda" in term: # contains (17)
         continue
-    if "x(* y(* lambda(* t" in term: # reducible by x(* y(* lambda(* t(* *)))) (the inductive hypothesis)
+    if "x(* y(* lambda(* t" in term: # contains x(* y(* lambda(* t(* *)))) (inductive hypothesis)
         continue
-    if "x(* y(* x(* lambda(* t" in term: # reducible by x(* y(* x(* lambda(* t(* *)) (the inductive hypothesis)
+    if "x(* y(* x(* lambda(* t" in term: # contains x(* y(* x(* lambda(* t(* *))))) (inductive hypothesis)
+        continue
+    if "x(* y(* x(* x(* lambda(* t(" in term: # contains x(* y(* x(* x(* lambda(* t(* *)))))) (inductive hypothesis)
         continue
 
     print(content[i])
@@ -38,7 +40,6 @@ for i in range(len(leading_terms)):
 # x(* y(* lambda(* x(* x(* x(* x(* t(* *))))))))  ->  x(* t(* lambda(* x(* x(* x(* x(* t(* *))))))))
 # x(* y(* x(* x(* x(* lambda(* x(* t(* *))))))))  ->  x(* t(* x(* x(* x(* lambda(* x(* t(* *))))))))
 # x(* y(* x(* x(* lambda(* x(* x(* t(* *))))))))  ->  x(* t(* x(* x(* lambda(* x(* x(* t(* *))))))))
-# x(* y(* x(* x(* lambda(* t(* x(* t(* *))))))))  ->  x(* t(* x(* x(* lambda(* t(* x(* t(* *))))))))
 # x(* y(* x(* lambda(* x(* x(* x(* t(* *))))))))  ->  x(* t(* x(* lambda(* x(* x(* x(* t(* *))))))))
-#
+# 
 # These rules are precisely the elements R_p for various p.
