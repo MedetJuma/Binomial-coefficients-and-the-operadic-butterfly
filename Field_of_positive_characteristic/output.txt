@@ -1,0 +1,163 @@
+===== Xminus =====
+quadratic rank: 16
+  G[0] LM z(z(* *) *)
+  G[1] LM z(y(* *) *)
+  G[2] LM y(z(* *) *)
+  G[3] LM y(y(* *) *)
+  G[4] LM z(* z(* *))
+  G[5] LM y(* z(* *))
+  G[6] LM y(* y(* *))
+  G[7] LM x(z(* *) *)
+  G[8] LM x(y(* *) *)
+  G[9] LM t(z(* *) *)
+  G[10] LM x(* z(* *))
+  G[11] LM t(* z(* *))
+  G[12] LM t(* y(* *))
+  G[13] LM x(x(* *) *)
+  G[14] LM x(t(* *) *)
+  G[15] LM t(x(* *) *)
+Xminus: arity 4, pass 1: 77 unprocessed critical pairs; current rules=16
+  new G[16] LM t(t(t(* *) *) *) pivot 1 primes []
+  new G[17] LM t(t(y(* *) *) *) pivot 1 primes []
+  new G[18] LM t(* t(y(* *) *)) pivot -1 primes []
+  new G[19] LM x(* t(y(* *) *)) pivot -1 primes []
+  new G[20] LM x(* y(* t(* *))) pivot 1 primes []
+  new G[21] LM x(* x(* y(* *))) pivot 1 primes []
+  new G[22] LM y(x(* y(* *)) *) pivot -1 primes []
+  new G[23] LM z(x(* y(* *)) *) pivot -1 primes []
+  new G[24] LM y(t(y(* *) *) *) pivot -1 primes []
+  new G[25] LM z(t(y(* *) *) *) pivot -1 primes []
+  new G[26] LM x(* y(t(* *) *)) pivot -1 primes []
+  new G[27] LM x(* y(x(* *) *)) pivot -1 primes []
+  new G[28] LM y(* x(* y(* *))) pivot -2 primes [2]
+  new G[29] LM z(* x(* y(* *))) pivot 1 primes []
+  new G[30] LM t(* x(* y(* *))) pivot -1 primes []
+  new G[31] LM x(* y(* x(* *))) pivot -2 primes [2]
+Xminus: arity 4, pass 2: 0 unprocessed critical pairs; current rules=32
+Xminus: ARITY 4 COMPLETE: 16 new rules; pivot primes [2]
+Xminus: arity 5, pass 1: 239 unprocessed critical pairs; current rules=32
+Xminus: ARITY 5 COMPLETE: 0 new rules; pivot primes []
+Xminus: arity 6, pass 1: 95 unprocessed critical pairs; current rules=32
+Xminus: ARITY 6 COMPLETE: 0 new rules; pivot primes []
+{'operad': 'Xminus', 'rules': 32, 'rules_by_arity': {'3': 16, '4': 16, '5': 0, '6': 0}, 'S_nonzero_events': 16, 'all_pivot_primes': [2], 'stages': {'4': {'new_rules': 16, 'passes': 2, 'pivot_primes': [2]}, '5': {'new_rules': 0, 'passes': 1, 'pivot_primes': []}, '6': {'new_rules': 0, 'passes': 1, 'pivot_primes': []}}}
+
+===== Xplus =====
+quadratic rank: 16
+  G[0] LM z(z(* *) *)
+  G[1] LM z(y(* *) *)
+  G[2] LM y(z(* *) *)
+  G[3] LM y(y(* *) *)
+  G[4] LM z(* z(* *))
+  G[5] LM y(* z(* *))
+  G[6] LM y(* y(* *))
+  G[7] LM x(z(* *) *)
+  G[8] LM x(y(* *) *)
+  G[9] LM t(z(* *) *)
+  G[10] LM x(* z(* *))
+  G[11] LM t(* z(* *))
+  G[12] LM t(* y(* *))
+  G[13] LM x(x(* *) *)
+  G[14] LM x(t(* *) *)
+  G[15] LM t(x(* *) *)
+Xplus: arity 4, pass 1: 77 unprocessed critical pairs; current rules=16
+  new G[16] LM t(t(t(* *) *) *) pivot 1 primes []
+  new G[17] LM t(t(y(* *) *) *) pivot 1 primes []
+  new G[18] LM t(* t(y(* *) *)) pivot -1 primes []
+  new G[19] LM x(* t(y(* *) *)) pivot -1 primes []
+  new G[20] LM x(* y(* t(* *))) pivot -1 primes []
+  new G[21] LM x(* x(* y(* *))) pivot 1 primes []
+  new G[22] LM y(x(* y(* *)) *) pivot -1 primes []
+  new G[23] LM z(x(* y(* *)) *) pivot -1 primes []
+  new G[24] LM y(t(y(* *) *) *) pivot -1 primes []
+  new G[25] LM z(t(y(* *) *) *) pivot -1 primes []
+  new G[26] LM x(* y(t(* *) *)) pivot 1 primes []
+  new G[27] LM x(* y(x(* *) *)) pivot 1 primes []
+  new G[28] LM z(* x(* y(* *))) pivot -1 primes []
+  new G[29] LM y(* x(* y(* *))) pivot 1 primes []
+Xplus: arity 4, pass 2: 0 unprocessed critical pairs; current rules=30
+Xplus: ARITY 4 COMPLETE: 14 new rules; pivot primes []
+Xplus: arity 5, pass 1: 205 unprocessed critical pairs; current rules=30
+  new G[30] LM t(* x(* y(* x(* *)))) pivot -1 primes []
+  new G[31] LM x(* y(* x(* t(* *)))) pivot -1 primes []
+  new G[32] LM x(* t(* x(* y(* *)))) pivot -1 primes []
+  new G[33] LM t(t(* x(* y(* *))) *) pivot -1 primes []
+  new G[34] LM t(t(* *) x(* y(* *))) pivot -1 primes []
+  new G[35] LM t(* t(* x(* y(* *)))) pivot 1 primes []
+  new G[36] LM y(* t(* x(* y(* *)))) pivot 1 primes []
+  new G[37] LM z(* t(* x(* y(* *)))) pivot 1 primes []
+  new G[38] LM y(t(* x(* y(* *))) *) pivot 1 primes []
+  new G[39] LM t(y(* *) x(* y(* *))) pivot -1 primes []
+  new G[40] LM z(t(* x(* y(* *))) *) pivot 1 primes []
+Xplus: arity 5, pass 2: 0 unprocessed critical pairs; current rules=41
+Xplus: ARITY 5 COMPLETE: 11 new rules; pivot primes []
+Xplus: arity 6, pass 1: 308 unprocessed critical pairs; current rules=41
+  new G[41] LM x(* y(* x(* x(* t(* *))))) pivot 1 primes []
+Xplus: arity 6, pass 2: 0 unprocessed critical pairs; current rules=42
+Xplus: ARITY 6 COMPLETE: 1 new rules; pivot primes []
+{'operad': 'Xplus', 'rules': 42, 'rules_by_arity': {'3': 16, '4': 14, '5': 11, '6': 1}, 'S_nonzero_events': 26, 'all_pivot_primes': [], 'stages': {'4': {'new_rules': 14, 'passes': 2, 'pivot_primes': []}, '5': {'new_rules': 11, 'passes': 2, 'pivot_primes': []}, '6': {'new_rules': 1, 'passes': 2, 'pivot_primes': []}}}
+
+===== COMBINED SUMMARY =====
+{
+  "Xminus": {
+    "operad": "Xminus",
+    "rules": 32,
+    "rules_by_arity": {
+      "3": 16,
+      "4": 16,
+      "5": 0,
+      "6": 0
+    },
+    "S_nonzero_events": 16,
+    "all_pivot_primes": [
+      2
+    ],
+    "stages": {
+      "4": {
+        "new_rules": 16,
+        "passes": 2,
+        "pivot_primes": [
+          2
+        ]
+      },
+      "5": {
+        "new_rules": 0,
+        "passes": 1,
+        "pivot_primes": []
+      },
+      "6": {
+        "new_rules": 0,
+        "passes": 1,
+        "pivot_primes": []
+      }
+    }
+  },
+  "Xplus": {
+    "operad": "Xplus",
+    "rules": 42,
+    "rules_by_arity": {
+      "3": 16,
+      "4": 14,
+      "5": 11,
+      "6": 1
+    },
+    "S_nonzero_events": 26,
+    "all_pivot_primes": [],
+    "stages": {
+      "4": {
+        "new_rules": 14,
+        "passes": 2,
+        "pivot_primes": []
+      },
+      "5": {
+        "new_rules": 11,
+        "passes": 2,
+        "pivot_primes": []
+      },
+      "6": {
+        "new_rules": 1,
+        "passes": 2,
+        "pivot_primes": []
+      }
+    }
+  }
+}
