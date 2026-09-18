@@ -1,0 +1,125 @@
+# Operadic Buchberger Configuration File
+# --------------------------------------
+
+# Actions:
+#  normalise  -- find a Groebner basis
+#  count      -- count the number of normal forms
+#                  with respect to the given theory
+
+actions: normalise count
+
+# --------------------------------------
+# Parameters for counting
+
+# Count limit
+#   for each arity up to the given limit,
+#   the number of normal forms will be counted
+
+count limit: 6
+
+# --------------------------------------
+# Parameters for normalisation
+
+# Output options
+#  initial    -- show the initial theory
+#  new        -- show new rewrite rules at each stage
+#  final      -- show final theory
+#  evaluation -- show the evaluation of each critical pair
+
+output: final
+
+# Time limit (seconds)
+#   computation will be abandoned after this time
+#   leave empty for no time limit
+
+time limit: 
+
+# Arity limit (number of leaves)
+#   computation will be abandoned upon reaching this arity
+#   leave empty for no arity limit
+
+arity limit: 6
+
+# --------------------------------------
+# Operad specification
+
+# Field
+# the default field over which polynomials are taken is the rationals
+# to use a finite integer field instead, give a (prime) number here 
+
+field: 
+
+# Operad type
+#  choose one of: shuffle / asymmetric
+#  and one of:    signed / unsigned
+
+operad type: asymmetric unsigned
+
+# Signature
+# give a number of operators defined by
+#   str  (optional)        -- a name
+#   num  (optional)        -- a weight (for use in a weighted ordering)
+#   +    (optional)        -- a positive homological degree
+#   (num), [num], or {num} -- bracket type and arity (num)
+# name, weight and homological degree may be given in any order
+# names (if given) must be unique
+
+# Measure 
+# a measure for ordering trees is given by a sequence of:
+#   ar               -- arity
+#   deg              -- degree or depth
+#   perm   / permr   -- (reverse) leaf order
+#   deglex / deglexr -- (reverse) degree-lexicographic path order
+#   weighted
+#   quantum(-,-)     -- operator should be given in same order as signature
+
+measure: weighted deglex      
+
+signature: t(2) 4y(2) x(2) 4z(2)
+
+# --------------------------------------
+# Theory specification
+
+# Theory
+# a theory is given by a series of polynomials (each on a new line)
+# a polynomial is given by a sum of monomials,
+#    m1 (+/-) m2 (+/-) ... (+/-) mn
+# a monomial is given by
+#    x or x/y  -- an integer or rational multiplier (optional)
+#    tree      -- a tree over the given signature
+# a tree is given by one of
+#    num or *               -- a leaf
+#    str (tree ... tree)    -- the name (str) is optional; if absent,
+#    str [tree ... tree]    -- the operator is identified by bracket type
+#    str {tree ... tree}    -- the number of (tree)s must match the arity
+#                               given by the signature
+# for shuffle trees, leaves must be a permutation of 1..n
+# for asymmetric trees, all leaves are reset to *
+
+theory:
+
+# x left up arrow 
+# y right down arrow
+# z right up arrow
+# t left down arrow
+
+x(x(* *) *) - x(* x(* *)) - x(* t(* *))
+x(x(* *) *) - x(* y(* *)) - x(* z(* *))
+x(z(* *) *) - z(* x(* *)) - z(* t(* *))
+z(x(* *) *) - z(* z(* *)) - z(* y(* *))
+z(z(* *) *) - z(* z(* *)) - z(* y(* *))
+
+x(t(* *) *) - t(* x(* *))
+x(t(* *) *) - t(* z(* *))
+x(y(* *) *) - y(* x(* *))
+z(t(* *) *) - y(* z(* *))
+z(y(* *) *) - y(* z(* *))
+
+t(x(* *) *) + t(t(* *) *) - t(* t(* *))
+t(x(* *) *) + t(t(* *) *) - t(* y(* *))
+t(z(* *) *) + t(y(* *) *) - y(* t(* *))
+y(x(* *) *) + y(t(* *) *) - y(* y(* *))
+y(z(* *) *) + y(y(* *) *) - y(* y(* *))
+
+# X +
+y(z(* *) *) - y(x(* *) *) - x(* t(* *)) + x(* y(* *))
