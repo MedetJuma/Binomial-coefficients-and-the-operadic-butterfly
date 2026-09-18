@@ -7,3 +7,5 @@ Consider an operad $\mathcal X^+$ with an adjoined binary operation $\lambda$. T
 - The "input.txt" file is the Haskell theory file,
 - The [Xplus_lambda_GroebnerBasis.txt](./Verification_Xplus/Xplus_lambda_GroebnerBasis.txt) file contains the Gröbner basis of the operad up to arity $9$,
 - The [check_induction.py](./Verification_Xplus/check_induction.py) file contains the Python script that verifies that the rules arising from $$x(a_1, y(a_2, \lambda(a_3, x(a_4, t(a_5, a_6))))) \mapsto x(a_1, t(a_2, \lambda(a_3, x(a_4, t(a_5, a_6)))))$$ are reduced, except $R_p$ for various $p$. 
+
+The folder [Field_of_positive_characteristic](./Field_of_positive_characteristic/) contains the Python script from Section 6, which verifies the Gröbner bases over fields with non-zero characteristic p.
