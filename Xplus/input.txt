@@ -15,7 +15,7 @@ actions: normalise count
 #   for each arity up to the given limit,
 #   the number of normal forms will be counted
 
-count limit: 6
+count limit: 8
 
 # --------------------------------------
 # Parameters for normalisation
@@ -38,7 +38,7 @@ time limit:
 #   computation will be abandoned upon reaching this arity
 #   leave empty for no arity limit
 
-arity limit: 6
+arity limit: 8
 
 # --------------------------------------
 # Operad specification
