@@ -1,6 +1,6 @@
 This is the addendum to the paper "Binomial coefficients and the operadic butterfly" by Vladimir Dotsenko and Medet Jumadildayev.
 
-The folders [Xminus](./Xminus/) and [Xplus](./Xplus/) contain the Haskell theory files "input.txt" for the operads $\mathcal X^-$ and $\mathcal X^+$, respectively. One can execute the Gröbner basis computation using the [Haskell operadic Gröbner bases calculator](https://irma.math.unistra.fr/~dotsenko/Operads.html). The file [Xminus_GroebnerBasis.txt](./Xminus/Xminus_GroebnerBasis.txt) contains the fully reduced Gröbner basis of $\mathcal X^-$, and [Xplus_GroebnerBasis.txt](./Xplus/Xplus_GroebnerBasis.txt) contains the Gröbner basis elements of $\mathcal X^+$ up to arity $6$.
+The folders [Xminus](./Xminus/) and [Xplus](./Xplus/) contain the Haskell theory files "input.txt" for the operads $\mathcal X^-$ and $\mathcal X^+$, respectively. One can execute the Gröbner basis computation using the [Haskell operadic Gröbner bases calculator](https://irma.math.unistra.fr/~dotsenko/Operads.html). The file [Xminus_GroebnerBasis.txt](./Xminus/Xminus_GroebnerBasis.txt) contains the fully reduced Gröbner basis of $\mathcal X^-$, and [Xplus_GroebnerBasis.txt](./Xplus/Xplus_GroebnerBasis.txt) contains the Gröbner basis elements of $\mathcal X^+$ up to arity $8$.
 
 Consider an operad $\mathcal X^+$ with an adjoined binary operation $\lambda$. The induction verification files from Section 4 of the paper are contained in [Verification_Xplus](./Verification_Xplus/):
 
